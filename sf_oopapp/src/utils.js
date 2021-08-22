@@ -31,3 +31,5 @@ export const generateTestAdmin = function (Admin) {
     const testAdmin = new Admin(defaultAdmins['login'], defaultAdmins['password']);
     Admin.save(testAdmin);
 };
+
+
