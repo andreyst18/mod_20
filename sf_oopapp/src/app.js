@@ -41,6 +41,7 @@ loginForm.addEventListener("submit", function (e) {
     fillTopPanel();
   } else {
     alert('Доступ запрещен!');
+    location.reload();
   }
 
   function fillTopPanel () {
