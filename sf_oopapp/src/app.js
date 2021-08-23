@@ -23,6 +23,7 @@ generateTestAdmin(Admin);
 generateTestUser(User);
 
 loginForm.addEventListener("submit", function (e) {
+  let status = true;
   e.preventDefault();
   const formData = new FormData(loginForm);
   const login = formData.get("login");
@@ -48,6 +49,14 @@ loginForm.addEventListener("submit", function (e) {
   }
   
   document.querySelector("#content").innerHTML = fieldHTMLContent;
+
+  //Выход из личного кабинета
+  loginButton.addEventListener('click', () => {
+    status = false;
+    if (!status) {
+      location.reload();
+    }
+  });
 });
 
 
