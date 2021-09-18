@@ -14,9 +14,12 @@ import { left } from "@popperjs/core";
 
 export const appState = new State();
 
-const loginForm = document.querySelector("#app-login-form");
-const loginButton = document.getElementById('app-login');
-const greeting = document.getElementById('app-greeting');
+const loginForm = document.querySelector("#app-login-form")
+const loginButton = document.getElementById('app-login')
+const greeting = document.getElementById('app-greeting')
+const pleaseSignInText = document.getElementById('app-please')
+const content = document.querySelector("#content")
+//const bottomPanel = document.querySelector('#app-bottom-panel')
 
 //Создание и добавление тестовых администратора и пользователей в localstorage
 generateTestAdmin(Admin);
@@ -39,6 +42,13 @@ loginForm.addEventListener("submit", function (e) {
     ? taskFieldTemplate
     : noAccessTemplate;
     fillTopPanel();
+    pleaseSignInText.style.display = "none"
+    content.className = 'userBoard'
+    
+    let bottomPanel = document.createElement('div')
+    bottomPanel.id = 'app-bottom-panel'
+    document.body.append(bottomPanel)
+
   } else {
     alert('Доступ запрещен!');
     location.reload();
@@ -46,10 +56,10 @@ loginForm.addEventListener("submit", function (e) {
 
   function fillTopPanel () {
     loginButton.innerHTML = "<button id=\"app-exit-btn\" class=\"btn btn-outline-warning\" type=\"submit\">Sign Out</button>";
-    greeting.innerHTML = `<h4>Здравствуйте, ${login}!</h4>`;  
+    //greeting.innerHTML = `<h4>Здравствуйте, ${login}!</h4>`;  
   }
   
-  document.querySelector("#content").innerHTML = fieldHTMLContent;
+  content.innerHTML = fieldHTMLContent;
 
   //Выход из личного кабинета
   loginButton.addEventListener('click', () => {

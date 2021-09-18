@@ -13,7 +13,7 @@ export const addToStorage = function (obj, key) {
 export const generateTestUser = function (User) {
   const defaultUsers = [
     { login: 'test', password: 'qwerty123' },
-    { login: 'andrey', password: 'avs' },
+    { login: 'andrey', password: 'a' },
     { login: 'pavel', password: '5566q' },
     { login: 'olga_535', password: 'rmpz6' },
     { login: 'sergey_msk', password: '01mrt' }

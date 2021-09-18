@@ -9,10 +9,9 @@
 </head>
 
 <body class="bg-light">
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark app-top-panel">
+        <div class="app-name">Awesome Kanban Board</div>
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">SimpleTODO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -21,7 +20,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#"></a>
                     </li>
                 </ul>
                 <span id="app-greeting">
@@ -39,9 +38,11 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        <p id="content">Please Sign In to see your tasks!</p>
+    <div class="container app-task-field">
+        <div class="app-please" id="app-please">Please Sign In to see your tasks!</div>
+        <div id="content"></div>
     </div>
+    <!-- <div id="app-bottom-panel"></div> -->
 
 
 </body>
