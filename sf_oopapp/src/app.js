@@ -19,7 +19,8 @@ const loginButton = document.getElementById('app-login')
 const greeting = document.getElementById('app-greeting')
 const pleaseSignInText = document.getElementById('app-please')
 const content = document.querySelector("#content")
-//const bottomPanel = document.querySelector('#app-bottom-panel')
+
+
 
 //Создание и добавление тестовых администратора и пользователей в localstorage
 generateTestAdmin(Admin);
@@ -27,6 +28,8 @@ generateTestUser(User);
 
 loginForm.addEventListener("submit", function (e) {
   let status = true;
+  
+
   e.preventDefault();
   const formData = new FormData(loginForm);
   const login = formData.get("login");
@@ -49,6 +52,7 @@ loginForm.addEventListener("submit", function (e) {
     bottomPanel.id = 'app-bottom-panel'
     document.body.append(bottomPanel)
 
+
   } else {
     alert('Доступ запрещен!');
     location.reload();
@@ -61,14 +65,34 @@ loginForm.addEventListener("submit", function (e) {
   
   content.innerHTML = fieldHTMLContent;
 
+  //Создание новой задачи
+  const addBacklogTask = document.getElementById('addBacklogTask')
+  const backlogName = document.getElementById('backlog-name')
+  addBacklogTask.addEventListener('click', () => {
+    let newTask = document.createElement('div')
+    newTask.classList = 'task'
+    newTask.setAttribute('contenteditable', true)
+    backlogName.after(newTask)
+    addBacklogTask.innerHTML = 'Submit'
+
+    
+   
+  })
+
   //Выход из личного кабинета
   loginButton.addEventListener('click', () => {
-    status = false;
+    status = false
     if (!status) {
       location.reload();
     }
   });
+
+ 
 });
+
+
+     
+
 
 
 

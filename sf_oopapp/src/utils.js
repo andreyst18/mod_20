@@ -1,4 +1,7 @@
 import { Admin } from "./models/Admin";
+import taskFieldTemplate from "./templates/taskField.html";
+
+
 
 export const getFromStorage = function (key) {
   return JSON.parse(localStorage.getItem(key) || "[]");
@@ -31,5 +34,10 @@ export const generateTestAdmin = function (Admin) {
     const testAdmin = new Admin(defaultAdmins['login'], defaultAdmins['password']);
     Admin.save(testAdmin);
 };
+
+
+
+
+
 
 

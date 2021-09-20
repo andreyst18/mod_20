@@ -86,6 +86,7 @@ body {
   margin-top: 20px;
   border-radius: 10px;
   margin-right: 24px;
+  height: auto;
 }
 
 .app-task-block:last-child {
@@ -95,4 +96,47 @@ body {
 .block-name {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
+  margin-left: 12px;
+  margin-top: 12px;
+  font-weight: 400;
 }
+
+.app-task-addButton {
+  border: none;
+  font: normal 18px 'Roboto';
+  color: #5E6C84;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  margin-left: 14px;
+  padding: 0;
+}
+
+.plus-img {
+  margin-right: 4px;
+}
+
+.task {
+  background-color: #FFFFFF;
+  width: 258px;
+  min-height: 35px;
+  border-radius: 5px;
+  padding: 0;
+  margin: 15px 12px;
+  outline: none;
+  font: normal 18px 'Roboto';
+  font-weight: 400;
+  padding: 7px 9px 8px;
+
+}
+
+/*
+.inputTask { 
+  width: 100%;
+  max-height: 35px; 
+  border: none;
+  border-radius: 5px;
+  resize: none;
+  overflow: hidden;
+  outline: none;
+ }*/
